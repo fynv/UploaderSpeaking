@@ -1,0 +1,25 @@
+﻿<Window x:Class="UploaderSpeaking.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="1080" Width="1920" WindowStyle="None"
+        Background="#00000000" AllowsTransparency="True" Topmost ="True" >
+    <Grid>
+
+        <StackPanel HorizontalAlignment="Right" Margin="0,374,0,0" VerticalAlignment="Top" Panel.ZIndex="1">
+            <Label Content="Uploader Speaking" Background="#00000000"/>
+            <TextBox Name="Speech" Height="80" TextWrapping="Wrap" Text="Hello, this is uploader speaking!" FontFamily="SimHei" FontSize="48" Background="{x:Null}" KeyDown="Text_KeyDown"/>
+        </StackPanel>
+        <Button Content="↓" HorizontalAlignment="Right" Margin="0,347,0,0" VerticalAlignment="Top" Width="28" Height="28" Click="Focus_Click" RenderTransformOrigin="0.464,-0.591" Panel.ZIndex="1"/>
+        <Button Name="btnTextColor" Content="T" HorizontalAlignment="Right" Margin="0,347,28,0" VerticalAlignment="Top" Width="28" Height="28" Click="BtnTextColor_Click" RenderTransformOrigin="1,0.545" Panel.ZIndex="1"/>
+        <Button Name="btnDraw" HorizontalAlignment="Right" Margin="0,485,56,0" VerticalAlignment="Top" Width="28" Height="28" Panel.ZIndex="1" Click="btnDraw_Click">
+            <Image Width="25" Height="25" Source="pencil.jpg"/>
+        </Button>
+        <Button Name="btnDrawColor" Content="█" Width="28"  Height="28" HorizontalAlignment="Right" Margin="0,485,28,0" VerticalAlignment="Top" Foreground="Red" Panel.ZIndex="1" Click="btnDrawColor_Click"/>
+        <Button Name="btnClear" HorizontalAlignment="Right" Margin="0,485,0,0" VerticalAlignment="Top" Width="28" Height="28" Panel.ZIndex="1" Click="btnClear_Click">
+            <Image Width="25" Height="25" Source="clear.jpg"/>
+        </Button>
+        <Canvas Name="canvas" Margin="0,0,0,0" Panel.ZIndex="0" MouseLeftButtonDown="OnCanvasMouseDown" MouseMove="OnCanvasMosueMove" MouseLeftButtonUp="OnCanvasMouseUp"/>
+
+
+    </Grid>
+</Window>
