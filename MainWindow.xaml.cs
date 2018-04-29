@@ -29,7 +29,7 @@ namespace UploaderSpeaking
     public partial class MainWindow : Window
     {
         DispatcherTimer timer = new DispatcherTimer();
-        System.Drawing.Color text_color = System.Drawing.Color.Black;
+        System.Drawing.Color text_color = System.Drawing.Color.Yellow;
         byte text_alpha = 255;
         System.Drawing.Color drawing_color = System.Drawing.Color.Red;
         bool drawing = false;
@@ -50,7 +50,14 @@ namespace UploaderSpeaking
             #endregion  
 
             timer.Tick += new EventHandler(timer_Tick);
-            //canvas.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(1, 0, 0, 0));
+
+            SolidColorBrush brush = new SolidColorBrush(System.Windows.Media.Color.FromArgb(text_color.A, text_color.R, text_color.G, text_color.B));
+            btnTextColor.Foreground = brush;
+            Speech.Foreground = brush;
+
+            SolidColorBrush brush2 = new SolidColorBrush(System.Windows.Media.Color.FromArgb(drawing_color.A, drawing_color.R, drawing_color.G, drawing_color.B));
+            btnDrawColor.Foreground = brush2;
+            
         }
 
         private void Focus_Click(object sender, RoutedEventArgs e)
