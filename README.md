@@ -1,2 +1,2 @@
 # UploaderSpeaking
-For technical video uploaders who prefers typing to talking.
+For technical video uploaders who prefer typing to talking.
